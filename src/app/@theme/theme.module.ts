@@ -43,14 +43,6 @@ import { NbSecurityModule } from '@nebular/security';
 import {
   FooterComponent,
   HeaderComponent,
-  SearchInputComponent,
-  ThemeSettingsComponent,
-  SwitcherComponent,
-  LayoutDirectionSwitcherComponent,
-  ThemeSwitcherComponent,
-  TinyMCEComponent,
-  ThemeSwitcherListComponent,
-  ToggleSettingsButtonComponent,
 } from './components';
 import {
   CapitalizePipe,
@@ -109,24 +101,15 @@ const NB_MODULES = [
 ];
 
 const COMPONENTS = [
-  SwitcherComponent,
-  LayoutDirectionSwitcherComponent,
-  ThemeSwitcherComponent,
-  ThemeSwitcherListComponent,
   HeaderComponent,
   FooterComponent,
-  SearchInputComponent,
-  ThemeSettingsComponent,
-  TinyMCEComponent,
   OneColumnLayoutComponent,
   SampleLayoutComponent,
   ThreeColumnsLayoutComponent,
   TwoColumnsLayoutComponent,
-  ToggleSettingsButtonComponent,
 ];
 
 const ENTRY_COMPONENTS = [
-  ThemeSwitcherListComponent,
 ];
 
 const PIPES = [
@@ -141,7 +124,7 @@ const PIPES = [
 const NB_THEME_PROVIDERS = [
   ...NbThemeModule.forRoot(
     {
-      name: 'default',
+      name: 'corporate',
     },
     [ DEFAULT_THEME, COSMIC_THEME, CORPORATE_THEME ],
   ).providers,
