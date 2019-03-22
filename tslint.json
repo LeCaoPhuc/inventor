@@ -24,8 +24,7 @@
     ],
     "import-spacing": true,
     "indent": [
-      true,
-      "spaces"
+      true
     ],
     "interface-over-type-literal": true,
     "label-position": true,
@@ -36,12 +35,7 @@
     "member-access": false,
     "no-arg": true,
     "no-console": [
-      true,
-      "debug",
-      "log",
-      "time",
-      "timeEnd",
-      "trace"
+      false
     ],
     "no-construct": true,
     "no-debugger": true,
@@ -67,7 +61,7 @@
       "check-else",
       "check-whitespace"
     ],
-    "prefer-const": true,
+    "prefer-const": false,
     "quotemark": [
       true,
       "single"
@@ -105,13 +99,11 @@
     "directive-selector": [
       true,
       "attribute",
-      "ngx",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "ngx",
       "kebab-case"
     ],
     "ban": [

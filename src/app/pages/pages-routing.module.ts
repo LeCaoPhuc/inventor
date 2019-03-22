@@ -14,9 +14,6 @@ const routes: Routes = [{
     path: 'modal-overlays',
     loadChildren: './modal-overlays/modal-overlays.module#ModalOverlaysModule',
   }, {
-    path: 'forms',
-    loadChildren: './forms/forms.module#FormsModule',
-  }, {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',

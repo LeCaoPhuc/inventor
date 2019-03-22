@@ -9,6 +9,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Resource Pool',
     icon: 'fa fa-laptop-code',
-    link: '/pages/forms/inputs',
+    link: '/pages/modal-overlays/window',
   },
 ];

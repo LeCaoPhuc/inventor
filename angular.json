@@ -38,6 +38,7 @@
               "node_modules/angular-tree-component/dist/angular-tree-component.css",
               "node_modules/pace-js/templates/pace-theme-flash.tmpl.css",
               "node_modules/leaflet/dist/leaflet.css",
+              "node_modules/formiojs/dist/formio.full.min.css",
               "src/app/@theme/styles/styles.scss"
             ],
             "scripts": [
@@ -50,7 +51,11 @@
               "node_modules/echarts/dist/echarts.min.js",
               "node_modules/echarts/dist/extension/bmap.min.js",
               "node_modules/chart.js/dist/Chart.min.js",
-              "node_modules/@fortawesome/fontawesome-free/js/all.js"
+              "node_modules/@fortawesome/fontawesome-free/js/all.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",             
+              "node_modules/formiojs/dist/formio.full.min.js",
+              "node_modules/monaco-editor/min/vs/loader.js" 
             ]
           },
           "configurations": {

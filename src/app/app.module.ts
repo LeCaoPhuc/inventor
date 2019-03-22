@@ -14,6 +14,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SharedModule } from './shared/share.module';
+import { AngularMonacoEditorConfig, AngularMonacoEditorModule } from 'angular-monaco-editor';
+import { MonacoEditorModule } from './shared/modules/monaco-editor/monaco-editor.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +29,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
+    SharedModule.forRoot(),
+    AngularMonacoEditorModule.forRoot(),
+    MonacoEditorModule,
   ],
   bootstrap: [AppComponent],
   providers: [

@@ -1,0 +1,67 @@
+import { Injectable } from '@angular/core';
+import * as Parse from 'parse';
+import { ParseService } from './parse.service';
+import { BehaviorSubject, Subject } from 'rxjs';
+
+@Injectable()
+export class AuthService {
+	public authenticatedSubject: Subject<boolean>;
+	private currentUserIsAdmin: boolean;
+
+	constructor(
+		private parseService: ParseService,
+	) {
+		this.authenticatedSubject = new BehaviorSubject(true);
+	}
+
+	/**
+	 * Check current user is authenticated
+	 * @returns boolean
+	 */
+	public isAuthenticated(): boolean {
+		return !!this.getCurrentUser();
+	}
+
+	/**
+	 * Get current user object
+	 * @returns Parse.User
+	 */
+	public getCurrentUser(): Parse.User {
+		return Parse.User.current();
+	}
+
+	/**
+	 * Parse Login
+	 * @param userName
+	 * @param password
+	 *
+	 * @returns Parse.User
+	 */
+	public async login(userName: string, password: string): Promise<Parse.User> {
+		try {
+			let user = await Parse.User.logIn(userName, password);
+			this.authenticatedSubject.next(true);
+			return user;
+		} catch (e) {
+			throw e;
+		}
+	}
+
+	/**
+	 * Parse Logout
+	 * @returns Promise
+	 */
+	public async logout() {
+		// this.authenticatedSubject.next(false);
+		Parse.User.logOut()
+			.then((res: any) => {
+				this.currentUserIsAdmin = undefined;
+				return true;
+			})
+			.catch((error: any) => {
+				this.currentUserIsAdmin = undefined;
+				return true;
+			});
+	}
+
+}

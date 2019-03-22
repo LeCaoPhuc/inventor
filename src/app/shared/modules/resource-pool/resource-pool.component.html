@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12" *ngFor="let robot of robots">
+            <ul class="list-group">
+                <li class="list-group-item bg-secondary text-white my-2 mx-1">
+                    <span class="font-weight-bold">{{ robot.name }} - {{ robot.platform.name }} {{
+                        robot.platform.version }}</span>
+                    <ul>
+                        <li>RAM: {{ (robot.ram.used / 1073741824).toFixed(1) }} GB/ {{ (robot.ram.total
+                            / 1073741824).toFixed(1) }} GB</li>
+                        <li>CPU: {{ (robot.cpu.pct * 100).toFixed(0) }}%</li>
+                        <li>DISK: {{ (robot.disk.available / 1073741824).toFixed(1) }} GB / {{ (robot.disk.total /
+                            1073741824).toFixed(1) }} GB</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
