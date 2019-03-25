@@ -22,7 +22,7 @@
     "build:prod": "npm run build -- --prod --aot",
     "test": "ng test",
     "test:coverage": "rimraf coverage && npm run test -- --code-coverage",
-    "lint": "ng lint",
+    "lint": "tslint --project ./",
     "lint:fix": "ng lint ngx-admin-demo --fix",
     "lint:styles": "stylelint ./src/**/*.scss",
     "lint:ci": "npm run lint && npm run lint:styles",
@@ -117,7 +117,7 @@
     "rimraf": "2.6.1",
     "stylelint": "^9.10.1",
     "ts-node": "3.2.2",
-    "tslint": "5.7.0",
+    "tslint": "5.8.0",
     "tslint-language-service": "^0.9.9",
     "typescript": "3.1.3"
   }

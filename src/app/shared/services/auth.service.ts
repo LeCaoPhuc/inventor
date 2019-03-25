@@ -6,7 +6,6 @@ import { BehaviorSubject, Subject } from 'rxjs';
 @Injectable()
 export class AuthService {
 	public authenticatedSubject: Subject<boolean>;
-	private currentUserIsAdmin: boolean;
 
 	constructor(
 		private parseService: ParseService,
@@ -55,11 +54,9 @@ export class AuthService {
 		// this.authenticatedSubject.next(false);
 		Parse.User.logOut()
 			.then((res: any) => {
-				this.currentUserIsAdmin = undefined;
 				return true;
 			})
 			.catch((error: any) => {
-				this.currentUserIsAdmin = undefined;
 				return true;
 			});
 	}

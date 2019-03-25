@@ -4,32 +4,27 @@
     "sections": [
         {
             "name": "*** Settings ***",
-            "args": [
-            ],
+            "args": [],
             "doc": "1) Importing test libraries, resource files and variable files. \n 2) Defining metadata for test suites and test cases."
         },
         {
             "name": "*** Variables ***",
-            "args": [
-            ],
+            "args": [],
             "doc": "Defining variables that can be used elsewhere in the test data."
         },
         {
             "name": "*** Tasks ***",
-            "args": [
-            ],
+            "args": [],
             "doc": "Creating tasks using available keywords. Single file can only contain either test cases or tasks."
         },
         {
             "name": "*** Test Cases ***",
-            "args": [
-            ],
+            "args": [],
             "doc": "Creating test cases from available keywords."
         },
         {
             "name": "*** Keywords ***",
-            "args": [
-            ],
+            "args": [],
             "doc": "Creating user keywords from existing lower-level keywords"
         }
     ],
@@ -109,5 +104,4 @@
             "doc": "Arguments of function"
         }
     ]
-
 }

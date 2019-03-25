@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LoadingService } from '../../services/loading.service';
 import { MonacoSetupService } from '../../services/monaco-setup.service';
 
@@ -9,7 +9,7 @@ import { MonacoSetupService } from '../../services/monaco-setup.service';
 	styleUrls: ['./monaco-editor.component.scss'],
 })
 export class MonacoEditorComponent implements OnInit {
-
+	@Input('code') code: string;
 	constructor(
 		private loadingService: LoadingService,
 		private monacoSetupService: MonacoSetupService,
@@ -23,7 +23,6 @@ export class MonacoEditorComponent implements OnInit {
 		theme: 'robotTheme',
 		language: 'robotLanguage',
 	};
-	code: string = ``;
 
 	ngOnInit() {
 		console.log('mg');
@@ -32,7 +31,7 @@ export class MonacoEditorComponent implements OnInit {
 		let i = 0;
 		let interval = setInterval(function () {
 			let monaco = (window as any).monaco;
-			console.log('Timeoit');
+			console.log('Timeout');
 			if (monaco) {
 				self.loading = false;
 				if (i === 0) {

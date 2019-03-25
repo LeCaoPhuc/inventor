@@ -6,7 +6,7 @@ import { Subject } from 'rxjs';
 export class KafkaService {
     private _kafka: Subject<any> = new Subject();
     constructor(private socket: Socket) {
-        socket.on('kafka', (message) => {
+        this.socket.on('kafka', (message) => {
             this._kafka.next(JSON.parse(message.value) || {});
         });
     }

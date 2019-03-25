@@ -15,8 +15,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/share.module';
-import { AngularMonacoEditorConfig, AngularMonacoEditorModule } from 'angular-monaco-editor';
+import { AngularMonacoEditorModule } from 'angular-monaco-editor';
 import { MonacoEditorModule } from './shared/modules/monaco-editor/monaco-editor.module';
+import { LoginModule } from './pages/login/login.module';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,6 +34,7 @@ import { MonacoEditorModule } from './shared/modules/monaco-editor/monaco-editor
     SharedModule.forRoot(),
     AngularMonacoEditorModule.forRoot(),
     MonacoEditorModule,
+    PagesModule,
   ],
   bootstrap: [AppComponent],
   providers: [

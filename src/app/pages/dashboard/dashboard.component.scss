@@ -1,7 +1,16 @@
 @import '../../@theme/styles/themes';
 @import '~bootstrap/scss/mixins/breakpoints';
 @import '~@nebular/theme/styles/global/breakpoints';
+.dashboard-container {
+  // height: 80vh;
+}
+.separator {
+  height: 3px;
+}
 
+.custom-file-input {
+  display: none;
+}
 @include nb-install-component() {
   .solar-card nb-card-header {
     border: none;

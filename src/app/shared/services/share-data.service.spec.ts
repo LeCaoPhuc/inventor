@@ -6,7 +6,7 @@ import { ShareDataService } from './share-data.service';
 describe('Service: ShareData', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ShareDataService]
+      providers: [ShareDataService],
     });
   });
 

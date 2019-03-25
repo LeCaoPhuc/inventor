@@ -6,7 +6,7 @@ import { ParseService } from './parse.service';
 describe('Service: Parse', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ParseService]
+      providers: [ParseService],
     });
   });
 

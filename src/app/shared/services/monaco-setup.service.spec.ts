@@ -6,7 +6,7 @@ import { MonacoSetupService } from './monaco-setup.service';
 describe('Service: MonacoSetup', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [MonacoSetupService]
+      providers: [MonacoSetupService],
     });
   });
 

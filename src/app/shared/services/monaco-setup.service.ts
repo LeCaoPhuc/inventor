@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { languages, Range } from 'monaco-editor/esm/vs/editor/editor.api';
 import * as builtIn from '../../../assets/robot-language/keyword/builtIn.json';
 import * as dialogs from '../../../assets/robot-language/keyword/dialogs.json';
 import * as operatingSystem from '../../../assets/robot-language/keyword/operatingSystem.json';
@@ -16,7 +15,6 @@ import { ShareDataService } from './share-data.service';
 
 export class MonacoSetupService {
 	public monaco: any;
-	private filePath = '../../../assets/robot-language/keyword/Dialogs.json';
 	constructor(
 		public shareDataService: ShareDataService,
 	) {
@@ -27,7 +25,7 @@ export class MonacoSetupService {
 		}
 
 		monaco.languages.register({ id: 'robotLanguage' });
-		let jsonData: any = this.getDataJson();
+		this.getDataJson();
 		let tokenizerRoot = this.generateTokenRootAndKeywordLanguage(monaco);
 		let tokenizerRootSpecialSections = this.generateTokenRootSpecialKeywordSelection(monaco);
 		let tokenizerRootSpecialTestCaseKeyword = this.generateTokenRootSpecialKeywordTestCaseKeyword(monaco);
@@ -84,11 +82,6 @@ export class MonacoSetupService {
 				rulesListSettingKeyword, rulesListFunctionComment,
 				rulesListFunctionTestCase, rulesListVariableToken),
 		});
-	}
-
-	private setupSuggestion(): Array<languages.CompletionItem> {
-		let suggestions: Array<languages.CompletionItem> = [];
-		return suggestions;
 	}
 
 	private generateTokenRootAndKeywordLanguage(monaco) {

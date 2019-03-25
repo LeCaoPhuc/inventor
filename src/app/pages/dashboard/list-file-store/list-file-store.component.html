@@ -1,0 +1,10 @@
+<nb-card size="medium">
+    <nb-card-header>List Files</nb-card-header>
+    <nb-card-body>
+        <ul class="user-activity-list">
+            <li *ngFor="let item of listFiles; let i = index" (click)="onItemClick(item)">
+                {{ item.get('filename') }}
+            </li>
+        </ul>
+    </nb-card-body>
+</nb-card>

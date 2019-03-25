@@ -1,5 +1,13 @@
-<div class="row">
+<div class="row dashboard-container">
   <div class="w-100">
-    <app-monaco-editor #monacoEditor></app-monaco-editor>    
+    <div >
+        <app-monaco-editor [code]="code" #monacoEditor></app-monaco-editor>    
+    </div>
+    <div class="separator">
+    </div>
+    <div>
+        <ngx-console [cmdContent]="cmdContent"></ngx-console>
+        <input type="file" class="custom-file-input" id="customFile" (change)="fileChangeEvent($event)" [(ngModel)]="fileUpload" #customFile>
+    </div>
   </div>
 </div>

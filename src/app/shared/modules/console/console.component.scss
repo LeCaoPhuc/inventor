@@ -1,0 +1,13 @@
+.cmd-content{
+    height: calc(23vh - 0px);
+    white-space: pre-line;
+    overflow-y: scroll;
+    padding: 1rem;
+    
+}
+.cmd-content::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    // background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}

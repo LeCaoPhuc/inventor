@@ -23,8 +23,7 @@ export class ShareDataService {
             let data = Utils.cloneObject(this.data[key]);
             this.data[key] = undefined;
             return data;
-        }
-        else {
+        } else {
             return Utils.cloneObject(this.data[key]);
         }
     }
