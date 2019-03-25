@@ -2,7 +2,7 @@ import { Component, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { LoadingService } from '../../shared/services/loading.service';
 import { MonacoEditorComponent } from '../../shared/modules/monaco-editor/monaco-editor.component';
 import { Router } from '@angular/router';
-import { NbMenuService, NbWindowService, NbDialogService } from '@nebular/theme';
+import { NbMenuService, NbDialogService } from '@nebular/theme';
 import { ParseService } from '../../shared/services/parse.service';
 import { InputFileNameFormComponent } from './input-filename-form/input-filename-form.component';
 import { ListFileStoreComponent } from './list-file-store/list-file-store.component';
@@ -34,7 +34,6 @@ export class DashboardComponent implements OnDestroy {
 		private nbMenuService: NbMenuService,
 		private parseService: ParseService,
 		private dialogService: NbDialogService,
-		private windowService: NbWindowService,
 		private shareDataService: ShareDataService,
 	) {
 		this.shareDataService.setData(currentFileNameKey, this.currentFileName);

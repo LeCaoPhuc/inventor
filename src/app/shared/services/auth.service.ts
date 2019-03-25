@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import * as Parse from 'parse';
-import { ParseService } from './parse.service';
 import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable()
@@ -8,7 +7,6 @@ export class AuthService {
 	public authenticatedSubject: Subject<boolean>;
 
 	constructor(
-		private parseService: ParseService,
 	) {
 		this.authenticatedSubject = new BehaviorSubject(true);
 	}

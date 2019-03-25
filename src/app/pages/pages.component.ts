@@ -15,7 +15,6 @@ import {currentFileNameKey} from './pages-menu' ;
   `,
 })
 export class PagesComponent implements OnInit {
-  private fileName: string = 'New File';
   menu: NbMenuItem[] = [
     {
       title: 'Code View',

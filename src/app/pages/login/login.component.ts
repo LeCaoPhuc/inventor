@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ParseService } from '../../shared/services/parse.service';
 import { AuthService } from '../../shared/services/auth.service';
 import * as Parse from 'parse';
 import { Router } from '@angular/router';
@@ -109,7 +108,6 @@ export class LoginComponent implements OnInit {
 
 	onLoginSubmit(event) {
 		console.log(event.form);
-		let self = this;
 		this.authService.login(event.data.id, event.data.password)
 			.then((res: any) => {
 				console.log(res);

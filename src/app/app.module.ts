@@ -17,7 +17,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/share.module';
 import { AngularMonacoEditorModule } from 'angular-monaco-editor';
 import { MonacoEditorModule } from './shared/modules/monaco-editor/monaco-editor.module';
-import { LoginModule } from './pages/login/login.module';
 import { PagesModule } from './pages/pages.module';
 
 @NgModule({

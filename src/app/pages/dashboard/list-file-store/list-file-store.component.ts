@@ -8,7 +8,7 @@ import { ParseService } from '../../../shared/services/parse.service';
 	styleUrls: ['list-file-store.component.scss'],
 })
 export class ListFileStoreComponent {
-	private listFiles = [];
+	public listFiles = [];
 	constructor(
 		public nbDialogRef: NbDialogRef<ListFileStoreComponent>,
 		public parseService: ParseService,
