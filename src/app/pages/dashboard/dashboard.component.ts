@@ -201,7 +201,6 @@ export class DashboardComponent implements OnDestroy {
 	}
 
 	getLog() {
-		let self = this;
 		this.parseService.getLog()
 			.then(function (res: any) {
 				console.log(res);
