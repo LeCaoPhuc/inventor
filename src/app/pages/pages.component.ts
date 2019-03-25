@@ -71,7 +71,7 @@ export class PagesComponent implements OnInit {
     {
       title: 'Resource Pool',
       icon: 'fa fa-laptop-code',
-      link: '/pages/modal-overlays/window',
+      link: '/pages/resource-pool',
     },
   ];
   constructor(

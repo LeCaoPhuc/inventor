@@ -6,6 +6,7 @@ import { LoginModule } from './login/login.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { SharedModule } from '../shared/share.module';
+import { ResourcePoolModule } from './resource-pool/resource-pool.module';
 const PAGES_COMPONENTS = [
   PagesComponent,
 ];
@@ -15,6 +16,7 @@ const PAGES_COMPONENTS = [
     PagesRoutingModule,
     ThemeModule,
     DashboardModule,
+    ResourcePoolModule,
     SharedModule,
     LoginModule,
   ],

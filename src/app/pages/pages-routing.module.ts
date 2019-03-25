@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ResourcePoolComponent } from './resource-pool/resource-pool.component';
 
 const routes: Routes = [{
   path: '',
@@ -13,6 +14,9 @@ const routes: Routes = [{
   }, {
     path: 'modal-overlays',
     loadChildren: './modal-overlays/modal-overlays.module#ModalOverlaysModule',
+  }, {
+    path: 'resource-pool',
+    component: ResourcePoolComponent,
   }, {
     path: '',
     redirectTo: 'dashboard',

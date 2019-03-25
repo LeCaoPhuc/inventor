@@ -18,6 +18,7 @@ import { SharedModule } from './shared/share.module';
 import { AngularMonacoEditorModule } from 'angular-monaco-editor';
 import { MonacoEditorModule } from './shared/modules/monaco-editor/monaco-editor.module';
 import { PagesModule } from './pages/pages.module';
+import { SocketIoModule } from 'ngx-socket-io';
 
 @NgModule({
   declarations: [AppComponent],

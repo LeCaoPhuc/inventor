@@ -13,12 +13,12 @@ import { KafkaService } from './services/kafka.service';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { AuthGuard } from './services/auth-guard.service';
 
-// const config: SocketIoConfig = { url: 'http://192.168.1.168:1337', options: {} };
+const config: SocketIoConfig = { url: 'http://192.168.1.96:3000', options: {} };
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.
  */
 @NgModule({
-    imports: [CommonModule, FormsModule, AngularMonacoEditorModule],
+    imports: [CommonModule, FormsModule, AngularMonacoEditorModule, SocketIoModule.forRoot(config)],
     declarations: [LoadingComponent],
     exports: [CommonModule, FormsModule, FormioModule, AngularMonacoEditorModule, LoadingComponent],
 })
